@@ -1,0 +1,26 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host:     <%= ENV.fetch('DB_HOST', 'localhost') %>
+  database: <%= ENV['POSTGRES_DB'] %>
+  username: postgres
+  password: '123456789'
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: hello_development
+
+test:
+  <<: *default
+  database: hello_test
+
+production:
+  <<: *default
+  database: hello_production
+  username: postgres
+  password: '123456789'
