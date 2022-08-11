@@ -26,6 +26,6 @@ production:
   host:     <%= ENV.fetch('DB_HOST', 'localhost') %>
   database: <%= ENV['DB_NAME'] %>
   username: <%= ENV['DB_USERNAME'] %>
-  password: <%= ENV['DB_PASSWORD'] %>
+  password: '111111'
   pool: 20
 
