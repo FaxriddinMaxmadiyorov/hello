@@ -21,4 +21,11 @@ test:
 
 production:
   <<: *default
-  database: hello_production
+  adapter:  postgresql
+  encoding: unicode
+  host:     <%= ENV.fetch('DB_HOST', 'localhost') %>
+  database: <%= ENV['DB_NAME'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+  pool: 20
+
