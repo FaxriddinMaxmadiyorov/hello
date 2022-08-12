@@ -7,7 +7,6 @@ default: &default
   password: '123456789'
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
@@ -19,6 +18,8 @@ test:
 
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
   database: hello
-  password: '111111'
+  host: localhost
+  port: 5432
+  user: hello
+  password: 111111
