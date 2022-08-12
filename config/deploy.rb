@@ -2,7 +2,7 @@ lock "~> 3.17.1"
 
 set :application, "hello"
 set :repo_url, "https://github.com/FaxriddinMaxmadiyorov/hello.git"
-set :passenger_restart_with_touch, true
+# set :passenger_restart_with_touch, true
 
 set :deploy_to, "/home/deploy/#{fetch :application}"
 
