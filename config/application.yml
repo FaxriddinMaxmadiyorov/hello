@@ -12,7 +12,6 @@ test:
   POSTGRES_PASSWORD: '123456789'
 
 production:
-  url: <%= ENV['DATABASE_URL'] %>
   TEST_POSTGRES_DB: production_hello_db
   POSTGRES_USER: postgres
   POSTGRES_PASSWORD: '111111'

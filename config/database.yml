@@ -21,6 +21,7 @@ test:
 
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   adapter:  postgresql
   encoding: unicode
   host:     <%= ENV.fetch('DB_HOST', 'localhost') %>
