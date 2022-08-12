@@ -24,7 +24,7 @@ production:
   url: <%= ENV['DATABASE_URL'] %>
   adapter:  postgresql
   encoding: unicode
-  host:     <%= ENV.fetch('DB_HOST', 'localhost') %>
+  host:     <%= ENV.fetch('DB_HOST') %>
   database: <%= ENV['POSTGRES_DB'] %>
   username: postgres
   password: '111111'
