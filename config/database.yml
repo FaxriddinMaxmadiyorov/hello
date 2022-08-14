@@ -22,4 +22,4 @@ production:
   host: localhost
   port: 5432
   user: hello
-  password: 123456789
+  password: '123456789'
