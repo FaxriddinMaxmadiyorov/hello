@@ -13,5 +13,5 @@ test:
 
 production:
   TEST_POSTGRES_DB: production_hello_db
-  POSTGRES_USER: hello
+  POSTGRES_USER: postgres
   POSTGRES_PASSWORD: '123456789'
